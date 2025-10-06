@@ -1,0 +1,32 @@
+---
+title: "Job Postings Data Analysis"
+author: "Zhengyu Zhou"
+format:
+  html:
+    toc: true
+    theme: cosmo
+  docx:
+    toc: true
+execute:
+  echo: true
+  eval: true
+  freeze: auto
+jupyter: python3
+---
+
+#| label: setup
+#| echo: false
+# Load necessary libraries
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly.express as px
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, count, avg
+
+import warnings
+warnings.filterwarnings("ignore")
+
+print("✅ Libraries loaded successfully!")
